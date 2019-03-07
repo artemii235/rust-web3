@@ -29,6 +29,12 @@ pub struct Transaction {
     pub gas: U256,
     /// Input data
     pub input: Bytes,
+    /// ECDSA recovery id
+    pub v: U64,
+    /// ECDSA signature r, 32 bytes
+    pub r: U256,
+    /// ECDSA signature s, 32 bytes
+    pub s: U256,
 }
 
 /// "Receipt" of an executed transaction: details of its execution.
