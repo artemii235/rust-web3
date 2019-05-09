@@ -83,7 +83,7 @@ pub struct Trace {
     /// Action
     pub action: Action,
     /// Result
-    pub result: Res,
+    pub result: Option<Res>,
     /// Trace address
     #[serde(rename = "traceAddress")]
     pub trace_address: Vec<usize>,
@@ -103,6 +103,8 @@ pub struct Trace {
     pub block_hash: H256,
     #[serde(rename = "type")]
     action_type: ActionType,
+    // Error
+    pub error: Option<String>,
 }
 
 /// Response
